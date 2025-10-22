@@ -109,6 +109,20 @@
     .cta svg{ width:22px; height:22px; color:#25D366; }
     .sub{ margin-top:16px; font-size:13px; color:var(--muted) }
     .footer{ margin-top:18px; font-size:14px; font-weight:800; letter-spacing:.04em }
+    @keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
+  }
+}
+
+.cta {
+  animation: pulse 2s infinite;
+}
   </style>
 </head>
 
@@ -158,6 +172,7 @@
   </script>
 </body>
 </html>
+
 
 
 
