@@ -123,6 +123,19 @@
 .cta {
   animation: pulse 2s infinite;
 }
+    /* 🔽 Flecha animada que señala el botón */
+.arrow-down {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 12px;
+  animation: bounceArrow 1s infinite;
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
   </style>
 </head>
 
@@ -136,7 +149,18 @@
       <h1 id="titulo">Pagos en el acto y retiros sin límite</h1>
 
       <p class="bonus">🎁 ¡Escribinos a whatsapp, tu bono te espera! 🎁</p>
-
+<!-- Flecha animada -->
+<div class="arrow-container">
+  <svg class="arrow-svg" viewBox="0 0 24 24">
+    <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="url(#gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <defs>
+      <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ff00ff"/>
+        <stop offset="100%" stop-color="#a020f0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
       <!-- CTA a WhatsApp -->
       <a id="whatsapp-btn"
         class="cta"
@@ -172,6 +196,7 @@
   </script>
 </body>
 </html>
+
 
 
 
