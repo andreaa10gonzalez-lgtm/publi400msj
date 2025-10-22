@@ -123,25 +123,33 @@
 .cta {
   animation: pulse 2s infinite;
 }
-/* ✨ Flecha SVG animada pequeña */
-.arrow-container {
+/* 🔽 Flechas múltiples alineadas y animadas */
+.arrows-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6px; /* menos separación del botón */
-  animation: floatArrow 1.4s ease-in-out infinite;
+  gap: 6px;               /* separación entre flechas */
+  margin-bottom: 6px;
 }
 
 .arrow-svg {
-  width: 24px;   /* 🔹 tamaño reducido */
-  height: 24px;  /* 🔹 tamaño reducido */
-  filter: drop-shadow(0 0 4px rgba(255, 0, 255, 0.6)); /* 🔹 brillo más suave */
+  width: 20px;            /* tamaño pequeño */
+  height: 20px;
+  filter: drop-shadow(0 0 4px rgba(255, 0, 255, 0.6));
   opacity: 0.9;
+  animation: floatArrow 1.4s ease-in-out infinite;
+}
+
+.arrow-svg:nth-child(2) {
+  animation-delay: 0.2s;  /* desfase suave */
+}
+.arrow-svg:nth-child(3) {
+  animation-delay: 0.4s;  /* más desfase */
 }
 
 @keyframes floatArrow {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); } /* 🔹 movimiento más corto */
+  50% { transform: translateY(6px); }
 }
   </style>
 </head>
@@ -156,8 +164,8 @@
       <h1 id="titulo">Pagos en el acto y retiros sin límite</h1>
 
       <p class="bonus">🎁 ¡Escribinos a whatsapp, tu bono te espera! 🎁</p>
-<!-- Flecha animada -->
-<div class="arrow-container">
+<!-- Flechas animadas alineadas -->
+<div class="arrows-container">
   <svg class="arrow-svg" viewBox="0 0 24 24">
     <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="url(#gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     <defs>
@@ -166,6 +174,14 @@
         <stop offset="100%" stop-color="#a020f0"/>
       </linearGradient>
     </defs>
+  </svg>
+
+  <svg class="arrow-svg" viewBox="0 0 24 24">
+    <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="url(#gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <svg class="arrow-svg" viewBox="0 0 24 24">
+    <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="url(#gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 </div>
       <!-- CTA a WhatsApp -->
@@ -203,6 +219,7 @@
   </script>
 </body>
 </html>
+
 
 
 
