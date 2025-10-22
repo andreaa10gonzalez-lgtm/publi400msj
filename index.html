@@ -123,18 +123,25 @@
 .cta {
   animation: pulse 2s infinite;
 }
-    /* 🔽 Flecha animada que señala el botón */
-.arrow-down {
-  font-size: 36px;
-  color: #fff;
-  margin-bottom: 12px;
-  animation: bounceArrow 1s infinite;
-  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+/* ✨ Flecha SVG animada pequeña */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px; /* menos separación del botón */
+  animation: floatArrow 1.4s ease-in-out infinite;
 }
 
-@keyframes bounceArrow {
+.arrow-svg {
+  width: 24px;   /* 🔹 tamaño reducido */
+  height: 24px;  /* 🔹 tamaño reducido */
+  filter: drop-shadow(0 0 4px rgba(255, 0, 255, 0.6)); /* 🔹 brillo más suave */
+  opacity: 0.9;
+}
+
+@keyframes floatArrow {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+  50% { transform: translateY(6px); } /* 🔹 movimiento más corto */
 }
   </style>
 </head>
@@ -196,6 +203,7 @@
   </script>
 </body>
 </html>
+
 
 
 
